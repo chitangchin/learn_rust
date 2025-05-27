@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 fn main() {
     //Variables are immutable
     let mut x = 5;
@@ -98,24 +100,64 @@ fn main() {
     */
 
     //Math Operations
-    let sum = 5 + 10;
+    // let sum = 5 + 10;
 
-    let difference = 95.5 - 4.3;
+    // let difference = 95.5 - 4.3;
     
-    let product = 4 * 30;
+    // let product = 4 * 30;
 
-    let quotietnt - 56.7 . 32.2;
+    // let quotient = 56.7 / 32.2;
 
-    let truncated = -5/3;
+    // let truncated = -5/3;
 
-    let remainder = 43 % 5;
+    // let remainder = 43 % 5;
 
     //Boolean type
-    let t = true;
-    let f: bool = false;
+    // let t = true;
+    // let f: bool = false;
 
     //character types
-    let c = 'z';
-    let z: char = 'z';
-    let heart_eyed_cat = '😻'; 
+    // let c = 'z';
+    // let z: char = 'z';
+    // let heart_eyed_cat = '😻'; 
+
+    //Primitive compound types - compound group multiple values in one type
+    //Tuple - grouping variety of types into one compound type
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    //We can destructure a tuple to get the individual values
+    let (x, y, z) = tup;
+    println!("x: {x}"); // 500
+    println!("y: {y}"); // 6.4
+    println!("z: {z}"); // 1
+
+    //can reference the value using the index
+    let tup_two = tup.1;
+    println!("{tup_two}"); //6.4
+
+    //Array
+
+    let a: [u8; 5] = [1, 2, 3, 4, 5];
+    let b = [3; 10];
+    println!("first: {}", a[0]); //1
+    println!("second: {}", b[3]); //3
+
+    //Accessing an invalid element falls in a runtine error handler instead of accessing invalid memory. Memory safety principle 
+    let mut count = 0;
+    loop {
+        match count.cmp(&5) {
+            Ordering::Equal => break,
+            Ordering::Less => 
+            {
+                println!("{}",add(a[count], b[count]));
+                count += 1;
+            },
+            Ordering::Greater => count += 1,
+        }
+    }
+}
+
+fn add(x: u8, y: u8) -> u8{
+    println!("{}", x + y);
+    x + y - 1 // expressions dont end with semicolon, statements end with semicolon, you cannot return a statement because statements dont have return value
 }
