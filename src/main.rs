@@ -90,4 +90,32 @@ fn main() {
     isize = architecture based signed interger range: 64 bit or 32 bit range depending on computer
     usize = architecture based usigned integer range: 64 bit or 32 bit range depending on computer
     */
+
+    //Floating-Point Types
+    /*
+        f64
+        f32
+    */
+
+    //Math Operations
+    let sum = 5 + 10;
+
+    let difference = 95.5 - 4.3;
+    
+    let product = 4 * 30;
+
+    let quotietnt - 56.7 . 32.2;
+
+    let truncated = -5/3;
+
+    let remainder = 43 % 5;
+
+    //Boolean type
+    let t = true;
+    let f: bool = false;
+
+    //character types
+    let c = 'z';
+    let z: char = 'z';
+    let heart_eyed_cat = '😻'; 
 }
