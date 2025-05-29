@@ -150,14 +150,46 @@ fn main() {
             Ordering::Less => 
             {
                 println!("{}",add(a[count], b[count]));
+                num(a[count]);
                 count += 1;
             },
             Ordering::Greater => count += 1,
         }
     }
+    //You can have if expressions inside of statements, if else must return the same data type
+    let number = if a[0] == 1 { 5 } else { 6 };
+    num(number);
+
+    let mut counter = 0;
+
+    while counter != 10 {
+        println!("{counter}");
+        counter += 1;
+    }
+
+    for element in a {
+        println!("the value is: {element}");
+    }
+
+    for nums in (1..10).rev() {
+        println!("{nums}!");
+        num(nums);
+    }
+
 }
 
 fn add(x: u8, y: u8) -> u8{
     println!("{}", x + y);
     x + y - 1 // expressions dont end with semicolon, statements end with semicolon, you cannot return a statement because statements dont have return value
+}
+
+fn num(x: u8) {
+    //The second if statment doenst execute, it stops at the first truthy condition in the if expression
+    if x == 5 {
+        println!("number is {}", x);
+    } else if x % 5 == 0 {
+        println!("This is also true if its 5");
+    } else {
+        println!("number is not 5!");
+    }
 }
