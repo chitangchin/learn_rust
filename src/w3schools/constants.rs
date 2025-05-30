@@ -1,4 +1,4 @@
-fn print_constants() {
+pub fn print_constants() {
     println!("\nThis is the constants.rs file****");
     const BIRTHYEAR: i32 = 1980;
     const MINUTES_PER_HOUR: i32 = 60;
@@ -10,6 +10,7 @@ fn print_constants() {
     
     Consants: cannot change, mut is not an optional keyword, type is required
     Variables: can change if mut is used, type is not required
-    
     */
+
+    println!("Constants: Birth Year {}, Minutes per hour {}", BIRTHYEAR, MINUTES_PER_HOUR);
 }
