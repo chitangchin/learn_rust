@@ -10,3 +10,6 @@ pub mod while_loops;
 pub mod for_loop;
 pub mod rust_functions;
 pub mod scope;
+pub mod rust_string;
+pub mod ownership;
+pub mod borrowing_references;

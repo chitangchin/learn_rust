@@ -13,4 +13,7 @@ fn main() {
     w3schools::for_loop::print_for_loop();
     w3schools::rust_functions::print_rust_function();
     w3schools::scope::print_scope();
+    w3schools::rust_string::print_rust_string();
+    w3schools::ownership::print_ownership();
+    w3schools::borrowing_references::print_borrowing_reference();
 }
