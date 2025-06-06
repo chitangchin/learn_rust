@@ -8,3 +8,5 @@ pub mod rust_matches;
 pub mod rust_loops;
 pub mod while_loops;
 pub mod for_loop;
+pub mod rust_functions;
+pub mod scope;

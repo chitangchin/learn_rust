@@ -11,4 +11,6 @@ fn main() {
     w3schools::rust_loops::print_loops();
     w3schools::while_loops::print_while_loops();
     w3schools::for_loop::print_for_loop();
+    w3schools::rust_functions::print_rust_function();
+    w3schools::scope::print_scope();
 }
